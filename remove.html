@@ -1,4 +1,4 @@
-!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
     <head>
         <meta charset="utf-8" />
@@ -74,7 +74,7 @@
     gap: 24px;
 }
 
-
+/* Logo */
 .logo {
     text-decoration: none;
     font-size: 1.5rem;
@@ -87,7 +87,7 @@
     color: #6b7280;
 }
 
-
+/* Navigation Links */
 .nav-links {
     display: flex;
     list-style: none;
@@ -189,18 +189,21 @@
 }
 
 h1 {
-    font-size: 3.5rem;
-    line-height: 1.1;
-    color: #374151;
+    font-size: 56px;
+    width: 320px;
+    line-height: 3.6rem;
+    color: rgb(69 69 69);
     font-weight: 600;
-    margin-bottom: 1.5rem;
+    margin-bottom: 16px;
+    font-family: Poppins, sans-serif;
+    
 }
 
 .subtitle {
     display: flex;
     align-items: center;
-    gap: 0.5rem;
-    font-size: 1.25rem;
+    gap: 8px;
+   
     color: #4b5563;
     margin-bottom: 3rem;
 }
@@ -234,11 +237,6 @@ h1 {
     left: -10%;
 }
 
-.demo-image {
-    width: 400px;
-    height: auto;
-    border-radius: 8px;
-}
 
 .right-section {
     flex: 1;
@@ -319,30 +317,56 @@ h1 {
     margin-top: 2rem;
 }
 
-.samples-title {
-    color: #374151;
-    font-weight: 500;
-    margin-bottom: 1rem;
+.right-below {
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    gap: 1.25rem; 
+    margin-top: 1.5rem;
+    font-weight: 600;
+    color: rgb(66, 78, 86); 
+    font-size: 16px;
+    text-align: left;
+}
+
+
+.right-below span {
+    font-size: 16px;
+    font-weight: bold;
+    color: rgb(66, 78, 86);
+    display: flex;
+    flex-direction: column;
+    line-height: 1.4; 
 }
 
 .sample-images {
     display: flex;
-    gap: 1rem;
-    margin-top: 1rem;
+    gap: 0.75rem; 
 }
 
-.sample-image {
-    width: 100px;
-    height: 100px;
-    border-radius: 8px;
+
+.sample-images img {
+    width: 78px; /
+    height: 78px;
     object-fit: cover;
-    cursor: pointer;
-    transition: transform 0.2s;
+    border-radius: 12px;/
+    border: 2px solid rgba(0, 0, 0, 0.1); 
+    transition: all 0.3s ease-in-out;
 }
 
-.sample-image:hover {
-    transform: scale(1.05);
+
+.sample-images img.selected {
+    border: 3px solid #3B82F6; 
+    padding: 2px; 
+    border-radius: 12px; 
 }
+
+
+
+
+
+
+
 
 .footer-text {
     text-align: center;
@@ -387,25 +411,23 @@ h1 {
     z-index: 1000;
 }
 
-.hidden-video {
-    width: 280px; 
-    height: 180px; 
-    margin: 0 auto;
-    display: block;
-    position: absolute;
-    left: 40px; 
-    top: 80px; 
-    border-radius: 10px; 
+.video-container {
+    width: 320px;
+    height: 213.33px;
     overflow: hidden;
+    margin-bottom: 20px;
 }
 
-#left-video {
+#hidden-video {
+    object-fit: cover;
+    margin-bottom: 32px;
+    max-width: 320px;
     width: 100%;
-    height: 100%;
-    object-fit: cover; 
-    border-radius: 10px;
+    height: auto;
+    display: block;
+    vertical-align: middle;
+    box-sizing: border-box;
 }
-
 
 .svg-container {
     display: flex;
@@ -428,12 +450,17 @@ h1 {
 .yellow-string {
     position: absolute;
     top: 20%;
-    right: -50px; 
-    width: 100px;
+    right: -30px; 
+    width: 80px;
     height: auto;
     transform: rotate(15deg);
     z-index: 10;
     color: rgb(255 200 62);
+    
+
+    
+    
+    
 }
 
 .svg-icon {
@@ -452,18 +479,24 @@ h1 {
 
          <nav>
             <div class="nav-container">
-                <a href="#" class="logo">
-                    <svg width="42.31" height="22.97" viewBox="0 0 42.31 43.97" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M0.474743 33.2646L20.7484 43.8648C20.874 43.931 21.0138 43.9656 21.1557 43.9656C21.2976 43.9656 21.4374 43.931 21.563 43.8648L41.837 33.2646C41.98 33.1901 42.0997 33.0778 42.1833 32.9398C42.2669 32.8018 42.3111 32.6435 42.3111 32.4821C42.3111 32.3206 42.2669 32.1623 42.1833 32.0243C42.0997 31.8863 41.98 31.774 41.837 31.6995L21.563 21.0993C21.4368 21.0341 21.2968 21 21.1548 21C21.0128 21 20.8728 21.0341 20.7466 21.0993L0.472994 31.6995C0.330292 31.7742 0.210774 31.8868 0.127434 32.0248C0.0440945 32.1629 0.00012531 32.3212 0.000305729 32.4826C0.000486147 32.644 0.0448106 32.8022 0.128459 32.9401C0.212107 33.0779 0.331874 33.1902 0.474743 33.2646V33.2646Z" 
-                        fill="#54616C" class="icon"></path>
-                    </svg>
-        
+                <a href="#" class="logo" style="display: flex; flex-direction: row; align-items: center;">
+                    <div class="logo-img">
+                        <svg width="42.31" height="32.97" viewBox="0 0 42.31 53.97" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M0.474743 33.2646L20.7484 43.8648C20.874 43.931 21.0138 43.9656 21.1557 43.9656C21.2976 43.9656 21.4374 43.931 21.563 43.8648L41.837 33.2646C41.98 33.1901 42.0997 33.0778 42.1833 32.9398C42.2669 32.8018 42.3111 32.6435 42.3111 32.4821C42.3111 32.3206 42.2669 32.1623 42.1833 32.0243C42.0997 31.8863 41.98 31.774 41.837 31.6995L21.563 21.0993C21.4368 21.0341 21.2968 21 21.1548 21C21.0128 21 20.8728 21.0341 20.7466 21.0993L0.472994 31.6995C0.330292 31.7742 0.210774 31.8868 0.127434 32.0248C0.0440945 32.1629 0.00012531 32.3212 0.000305729 32.4826C0.000486147 32.644 0.0448106 32.8022 0.128459 32.9401C0.212107 33.0779 0.331874 33.1902 0.474743 33.2646V33.2646Z"
+                                fill="#54616C" class="icon"></path>
+                            <path
+                                d="M41.8368 38.7346L38.4818 36.9809L22.3774 45.4001C22.0011 45.5968 21.5831 45.6998 21.1587 45.7004C20.7343 45.701 20.316 45.5992 19.9392 45.4036L3.82901 36.9802L0.474494 38.7339C0.331471 38.8084 0.21159 38.9207 0.127919 39.0588C0.0442486 39.1968 0 39.3552 0 39.5167C0 39.6782 0.0442486 39.8366 0.127919 39.9747C0.21159 40.1127 0.331471 40.2251 0.474494 40.2995L20.7481 50.8992C20.8737 50.9654 21.0135 51 21.1554 51C21.2973 51 21.4371 50.9654 21.5627 50.8992L41.8368 40.2995C41.9797 40.2249 42.0994 40.1125 42.183 39.9745C42.2666 39.8365 42.3108 39.6781 42.3108 39.5167C42.3108 39.3553 42.2666 39.1969 42.183 39.0589C42.0994 38.9209 41.9797 38.8085 41.8368 38.7339V38.7346Z"
+                                fill="#BAC0C4" class="icon"></path>
+                        </svg>
+    
+                    </div>
                     <div class="logo-text">remove<span>bg</span></div>
-        
-                    <svg width="42.31" height="22.97" viewBox="0 0 42.31 51" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M41.8368 38.7346L38.4818 36.9809L22.3774 45.4001C22.0011 45.5968 21.5831 45.6998 21.1587 45.7004C20.7343 45.701 20.316 45.5992 19.9392 45.4036L3.82901 36.9802L0.474494 38.7339C0.331471 38.8084 0.21159 38.9207 0.127919 39.0588C0.0442486 39.1968 0 39.3552 0 39.5167C0 39.6782 0.0442486 39.8366 0.127919 39.9747C0.21159 40.1127 0.331471 40.2251 0.474494 40.2995L20.7481 50.8992C20.8737 50.9654 21.0135 51 21.1554 51C21.2973 51 21.4371 50.9654 21.5627 50.8992L41.8368 40.2995C41.9797 40.2249 42.0994 40.1125 42.183 39.9745C42.2666 39.8365 42.3108 39.6781 42.3108 39.5167C42.3108 39.3553 42.2666 39.1969 42.183 39.0589C42.0994 38.9209 41.9797 38.8085 41.8368 38.7339V38.7346Z" 
-                        fill="#BAC0C4" class="icon"></path>
-                    </svg>
+    
+    
+    
+                </a>
                    
                 </a>
                 <div class="nav-links">
@@ -480,23 +513,19 @@ h1 {
     
         
         
-        <video id="hidden-video" preload="auto" autoplay playsinline muted loop>
-            <source src="https://sb.kaleidousercontent.com/67418/x/681f13b37d/emilia_compressed.mp4" type="video/mp4">
-        </video>
-        
-    
         <div class="main-content">
+            
             <div class="left-section">
+                <video id="hidden-video" preload="auto" autoplay playsinline muted loop>
+                    <source src="https://sb.kaleidousercontent.com/67418/x/681f13b37d/emilia_compressed.mp4" type="video/mp4">
+                </video>
+
                 <h1>Remove Image Background</h1>
                 <div class="subtitle">
                     <span>100% Automatically and</span>
                     <span class="free-tag">Free</span>
                 </div>
-                <div class="demo-container">
-                    <div class="yellow-blob"></div>
-                    <img src="/api/placeholder/400/500" alt="Demo image with background" class="demo-image">
-                </div>
-            </div>
+                
     
             <div class="right-section">
                 <div class="upload-box">
@@ -507,20 +536,31 @@ h1 {
                     <div class="yellow-string"></div>
                 </div>
     
-                <div class="samples-section">
+                <div class="right-below">
                     <p class="samples-title">No image?</p>
                     <p class="samples-title">Try one of these:</p>
-                    <div class="sample-images">
-                        <img src="/api/placeholder/100/100" alt="Sample 1" class="sample-image">
-                        <img src="/api/placeholder/100/100" alt="Sample 2" class="sample-image">
-                        <img src="/api/placeholder/100/100" alt="Sample 3" class="sample-image">
-                        <img src="/api/placeholder/100/100" alt="Sample 4" class="sample-image">
+                    <picture>
+                    <img src="https://static.remove.bg/uploader-examples/person/4_thumbnail.jpg" alt="Example image" class="w-full h-auto" loading="lazy" draggable="false">
+                </picture>
+
+                <picture>
+                    <img src="https://static.remove.bg/uploader-examples/animal/6_thumbnail.jpg" alt="Example image" class="w-full h-auto" loading="lazy" draggable="false">
+                </picture>
+                
+                <picture>
+                    <img src="https://static.remove.bg/uploader-examples/car/3_thumbnail.jpg" alt="Example image" class="w-full h-auto" loading="lazy" draggable="false">
+
+                </picture>
+
+                <picture>
+                    <img src="https://static.remove.bg/uploader-examples/product/4_thumbnail.jpg" alt="Example image" class="w-full h-auto" loading="lazy" draggable="false">
+                </picture>
                     </div>
                 </div>
 
                 
                     <div class="yellow-string">
-                        <svg width="182.72" height="191.62" viewBox="0 0 182.72 191.62" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                        <svg width="122.72" height="191.62" viewBox="0 0 182.72 191.62" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                             <path d="M182.648 183.128C178.597 187.405 171.028 191.799 163.237 191.977C157.571 192.103 152.323 190.012 148.058 185.927C139.232 177.468 138.372 158.735 137.621 142.22C137.204 133.157 136.747 122.877 134.696 119.768C131.836 115.376 124.509 108.471 107.735 111.458C94.4152 113.834 81.7884 115.329 73.6959 107.665C64.5031 98.9588 66.3544 85.5644 68.5325 76.244C69.271 73.0119 70.4408 69.8949 72.0105 66.9765C67.2371 63.1964 63.8062 58.7353 62.4015 54.3978C60.8072 49.4882 61.1485 43.5448 61.4696 37.8066C61.9457 29.5112 62.3974 21.6751 57.4255 18.3185C52.9599 15.3123 37.4838 14.4287 30.2947 16.7929C23.7769 18.9234 13.5899 18.9589 1.99423 6.93367C1.6401 6.5666 1.36158 6.13357 1.17454 5.65932C0.987495 5.18506 0.895589 4.67887 0.904109 4.16963C0.912629 3.66038 1.02138 3.15807 1.22417 2.69136C1.42696 2.22466 1.71981 1.80269 2.086 1.44957C2.45218 1.09646 2.88452 0.819116 3.35835 0.63335C3.83218 0.447587 4.33822 0.357049 4.84756 0.366916C5.3569 0.376784 5.85958 0.486848 6.32689 0.690842C6.7942 0.894836 7.21699 1.18879 7.57112 1.55585C12.4264 6.59173 19.8904 12.0448 27.8628 9.42376C35.8352 6.80273 54.2649 6.8425 61.7549 11.8939C70.3895 17.7206 69.7629 28.6339 69.2095 38.2642C68.9095 43.5287 68.6214 48.5014 69.7664 52.0262C70.775 55.1189 73.3834 58.1558 76.531 60.6768C76.9819 60.2006 77.4049 59.754 77.8356 59.3765C82.0627 55.4357 86.9774 53.4477 91.2962 53.9361C96.6192 54.5284 100.113 58.7801 100.195 64.7704C100.25 70.0573 97.3594 73.7039 92.4487 74.5175C88.6575 75.1291 83.6402 73.9231 78.5462 71.2419C77.4414 73.3904 76.607 75.6679 76.0619 78.0227C73.2511 90.0426 74.1576 97.4483 79.0031 102.037C84.4653 107.21 95.0526 105.831 106.352 103.814C122.037 101.019 134.401 105.177 141.174 115.524C144.395 120.438 144.815 129.89 145.362 141.875C146.018 156.197 146.832 174.017 153.401 180.345C156.233 183.027 159.368 184.313 163.024 184.23C168.933 184.098 174.615 180.307 176.996 177.793C177.702 177.048 178.675 176.614 179.703 176.588C180.73 176.561 181.727 176.944 182.474 177.651C183.221 178.359 183.657 179.333 183.687 180.361C183.716 181.388 183.336 182.384 182.63 183.129L182.648 183.128Z" fill="currentColor"/>
                         </svg>
                 </div>
