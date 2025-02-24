@@ -392,72 +392,67 @@ h1 {
 
 
 .right-below {
-    display: flex;
-    flex-direction: row;
-    align-items: row;
-    text-align: center;
-    margin-top: 20px;
-}
+      width: 100%;
+      max-width: 540px;
+    }
+
+    .header-section {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 16px;
+    }
+
+    .text-section {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    .samples-title {
+      font-size: 24px;
+      color: #4a5568;
+      margin-bottom: 2px;
+      font-weight: 500;
+      line-height: 1.2;
+    }
+
+    .image-grid {
+      display: flex;
+      justify-content: center;
+      gap: 8px;
+    }
+
+    .image-item {
+      width: 63.23px;
+      height: 63.23px;
+      border-radius: 10px;
+      overflow: hidden;
+    }
+
+    .image-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+
+    .terms-text {
+      margin-top: 16px;
+      font-size: 14px;
+      line-height: 1.5;
+      color: #4a5568;
+    }
+
+    .terms-text a {
+      color: #3182ce;
+      text-decoration: none;
+    }
 
 
-.samples-title {
-    font-size: 18px;
-    font-weight: 700;
-    color: #2D3E50;
-    margin: 0;
-    line-height: 1.4;
-}
 
 
-.samples-container {
-    display: flex;
-    justify-content: center;
-    gap: 12px;
-    margin-top: 12px;
-}
-
-
-.samples-container picture {
-    width: 72px;
-    height: 72px;
-    border-radius: 12px;
-    overflow: hidden;
-    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
-}
-
-
-.samples-container img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 12px;
-    transition: transform 0.2s ease-in-out;
-}
-
-.samples-container img:hover {
-    transform: scale(1.05);
-}
-
-
-.footer-text {
-    font-size: 14px;
-    color: rgb(84 97 108);
-    margin-top: 16px;
-    max-width: 500px;
-    flex: row;
-    justify-content: center;
-}
-
-
-.footer-text a {
-    color: rgb(84 97 108);
-    font-weight: 600;
-    text-decoration: none;
-    margin-right: .25rem;
-}
-
-.footer-text a:hover {
-    text-decoration: underline;
+.
 }
 
 
@@ -845,37 +840,30 @@ p {
                 </div>
             </div>
 
-            <div class="right-below">
-                <div class="max-w-md">
-                <div class="flex flex-col gap-2 sm:flex-row justify-between.items-center>"
-                
-                <span class="font-bold text-typo-secondary !mr-1 sm:!mr-0">No image?</span>
-                <span class="font-bold text-typo-secondary">Try one of these:</span>
-                </div>
-                
-                <figure class="!m-0"><picture><img src="https://static.remove.bg/uploader-examples/person/7_thumbnail.jpg" alt="Example image" class="w-full h-auto" loading="lazy" draggable="false"></picture><!----></figure>
-                <picture>
-                    <img src="https://static.remove.bg/uploader-examples/person/4_thumbnail.jpg" alt="Example image"
-                        class="w-full h-auto" loading="lazy" draggable="false">
-                </picture>
-
-                
-                <picture>
-                    <img src="https://static.remove.bg/uploader-examples/animal/6_thumbnail.jpg" alt="Example image"
-                        class="w-full h-auto" loading="lazy" draggable="false">
-                </picture>
-
-                <picture>
-                    <img src="https://static.remove.bg/uploader-examples/car/3_thumbnail.jpg" alt="Example image"
-                        class="w-full h-auto" loading="lazy" draggable="false">
-
-                </picture>
-
-                <picture>
-                    <img src="https://static.remove.bg/uploader-examples/product/4_thumbnail.jpg" alt="Example image"
-                        class="w-full h-auto" loading="lazy" draggable="false">
-                </picture>
-
+            <div class="container">
+                <div class="right-below">
+                  <div class="title-section">
+                    <p class="samples-title">No image?</p>
+                    <p class="samples-title">Try one of these:</p>
+                  </div>
+                  
+                  <div class="image-grid">
+                    <div class="image-item">
+                      <img src="https://static.remove.bg/uploader-examples/person/7_thumbnail.jpg" alt="Example image" loading="lazy" draggable="false">
+                    </div>
+                    
+                    <div class="image-item">
+                      <img src="https://static.remove.bg/uploader-examples/animal/6_thumbnail.jpg" alt="Example image" loading="lazy" draggable="false">
+                    </div>
+                    
+                    <div class="image-item">
+                      <img src="https://static.remove.bg/uploader-examples/car/3_thumbnail.jpg" alt="Example image" loading="lazy" draggable="false">
+                    </div>
+                    
+                    <div class="image-item">
+                      <img src="https://static.remove.bg/uploader-examples/product/4_thumbnail.jpg" alt="Example image" loading="lazy" draggable="false">
+                    </div>
+                  </div>
 
 <p class="text-2xs text-typo-secondary text-center sm:!text-left !mt-4">By uploading an image or URL you agree to our <a target="_blank" class="text-typo-secondary underline" draggable="false" href="/tos">Terms of Service</a>.
 To learn more about how remove.bg handles your personal data, check our <a target="_blank" rel="noopener" class="underline" style="color: inherit;" href="/privacy">Privacy Policy</a>.
@@ -888,3 +876,7 @@ To learn more about how remove.bg handles your personal data, check our <a targe
 </body>
 
 </html>
+
+
+
+<
